@@ -17,7 +17,9 @@ body{
 	grid-area: header;
 	text-align: center;
 	font-size:65px;
+	padding:0;
 }
+
 .parsha{
 grid-area: parsha;
 }
