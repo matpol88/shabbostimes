@@ -35,7 +35,8 @@ grid-area: parsha;
 	text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (orientation : portrait) 
+{
 	body{
 		margin:0;
 	}
@@ -47,7 +48,10 @@ grid-area: parsha;
  	grid-template-rows: auto;
  	grid-template-columns: 1fr;
 }
-.header,#candleLighting, #parsha, #havdala {
+.header{
+	font-size: 55px;
+	}
+#candleLighting, #parsha, #havdala {
 	font-size: 40px;
 	padding:10px;
 	margin:0;
