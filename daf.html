@@ -24,7 +24,8 @@ fetch('https://www.sefaria.org/api/calendars/')
     return response.json()
   })
  .then(function(textPull){
-  document.getElementById("heText").innerHTML = textPull.text;
+  document.getElementById("enText").innerHTML = textPull.text;
+  document.getElementById("heText").innerHTML = textPull.he;
  })
   })
 
