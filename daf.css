@@ -1,46 +1,46 @@
-  #enText, #heText, #nextText, #nextHeText{
-    margin: 0 20%;
-    font-size:18px;
+#enText, #heText, #nextText, #nextHeText{
+  margin: 0 20%;
+  font-size:18px;
 
-  }
+}
 
-  #heText{
-    padding-top: 5%;
-  }
+#heText{
+  padding-top: 5%;
+}
 
- .button{
+.button{
   display: grid;
   grid-template-columns: 4fr 1fr 4fr;
   margin-bottom: 8%;
- }
+}
 
-  #enText, #nextHeText, #nextText{
-    margin-top: 40px;
-    margin-left: 20%;
-    font-size:18px;
-  }
+#enText, #nextHeText, #nextText{
+  margin-top: 40px;
+  margin-left: 20%;
+  font-size:18px;
+}
 
-  #date, #pages{
-    text-align: center;
-     font-family: arial;
-  }
 
-  .header{
-    background: #2980b9;
-    padding:1%;
-    position: fixed;
-    width: 100%;
-  }
+.header div{
+  display: inline;
+}
 
 .header p{
+  color:white;
   display: inline;
-  color: white;
   text-align: center;
-  margin-left: 28%;
 }
-  @media screen and (orientation:portrait){
-     #enText, #heText, #nextText, #nextHeText{
-    margin: 40px 1.5%;
-  }
 
-  }
+.header{
+  background: #2980b9;
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr;
+}
+
+@media screen and (orientation:portrait){
+ #enText, #heText, #nextText, #nextHeText{
+  margin: 40px 1.5%;
+}
+}
