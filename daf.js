@@ -18,11 +18,17 @@ fetch('https://www.sefaria.org/api/calendars/')
   })
  .then(function(textPull){
    for (var pasuk of textPull.text) {
-    console.log(pasuk);
     var ul = document.getElementById("enText");
     var li = document.createElement("li");
     li.innerHTML = pasuk;
     ul.appendChild(li);
+  }
+  for (var hePasuk of textPull.he){
+    console.log(hePasuk);
+    var ul = document.getElementById("heText");
+    var heli = document.createElement("li");
+    heli.innerHTML = hePasuk;
+    ul.appendChild(heli);
   }
   //document.getElementById("enText").innerHTML = textPull.text;
   //document.getElementById("heText").innerHTML = textPull.he;

@@ -8,6 +8,11 @@ body{
   margin: 0 15%;
   padding-top: 65px;
   font-size: 24px;
+
+}
+
+#heText{
+  text-align: right;
 }
 .content p{
   margin-top:15%;
