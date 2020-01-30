@@ -21,7 +21,7 @@ fetch('https://www.sefaria.org/api/calendars/')
     console.log(pasuk);
     var ul = document.getElementById("enText");
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(textPull.text[1]));
+    li.innerHTML = pasuk;
     ul.appendChild(li);
   }
   //document.getElementById("enText").innerHTML = textPull.text;
