@@ -17,35 +17,20 @@ fetch('https://www.sefaria.org/api/calendars/')
     return response.json()
   })
  .then(function(textPull){
-   for (var pasuk of textPull.text) {
-    console.log(pasuk);
-    var ul = document.getElementById("enText");
+   for (var pasuk of textPull.text ) {
+    var ul = document.getElementById("enText"); 
     var li = document.createElement("li");
-    li.innerHTML = pasuk;
+    li.innerHTML = pasuk + "<br>"+"<br>";
     ul.appendChild(li);
   }
   //document.getElementById("enText").innerHTML = textPull.text;
-  //document.getElementById("heText").innerHTML = textPull.he;
-  //document.getElementById("next").innerHTML = textPull.next;
+  document.getElementById("heText").innerHTML = textPull.he;
+  document.getElementById("next").innerHTML = textPull.next;
   next = textPull.next;
   prev = textPull.prev;
   //document.getElementById('prevpages').innerHTML = prev;
  })
   })
-
-function prevPage(){
-  fetch('https://www.sefaria.org/api/texts/' + prev)
-  .then(function(response){
-    return response.json()
-  })
-  .then(function(prevPull){
-    document.getElementById('heText').innerHTML = prevPull.he;
-    document.getElementById('enText').innerHTML = prevPull.text;
-    document.getElementById("next").innerHTML = prevPull.next;
-    document.getElementById('pages').innerText = prevPull.title;
-    next = prevPull.next;
-  })
-}
 
 function nextPage(){
   fetch('https://www.sefaria.org/api/texts/' + next)
@@ -69,5 +54,20 @@ function nextnextPage(){
     document.getElementById('nextnextHeText').innerHTML = nextPull.he;
     document.getElementById('nextnextText').innerHTML=nextPull.text;
     document.getElementById('next').style.display = "none";
+  })
+}
+
+
+function prevPage(){
+  fetch('https://www.sefaria.org/api/texts/' + prev)
+  .then(function(response){
+    return response.json()
+  })
+  .then(function(prevPull){
+    document.getElementById('heText').innerHTML = prevPull.he;
+    document.getElementById('enText').innerHTML = prevPull.text;
+    document.getElementById("next").innerHTML = prevPull.next;
+    document.getElementById('pages').innerText = prevPull.title;
+    next = prevPull.next;
   })
 }
