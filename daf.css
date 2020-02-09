@@ -23,7 +23,6 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  position:fixed;
   padding-top:120px;
 }
 

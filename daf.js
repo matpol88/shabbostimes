@@ -10,8 +10,8 @@ fetch('https://www.sefaria.org/api/calendars/')
   })
   .then(function(myJson) {
    document.getElementById('date').innerHTML = myJson.date;
-   document.getElementById('pages').innerText = myJson.calendar_items[2].url;
-   date = myJson.calendar_items[2].url;
+   document.getElementById('pages').innerText = myJson.calendar_items[3].url;
+   date = myJson.calendar_items[3].url;
    fetch('https://www.sefaria.org/api/texts/' + date)
   .then(function(response) {
     return response.json()
@@ -28,7 +28,7 @@ fetch('https://www.sefaria.org/api/calendars/')
   document.getElementById("next").innerHTML = textPull.next;
   next = textPull.next;
   prev = textPull.prev;
-  //document.getElementById('prevpages').innerHTML = prev;
+  //document.getElementById('enText').innerHTML = prev;
  })
   })
 
@@ -69,5 +69,6 @@ function prevPage(){
     document.getElementById("next").innerHTML = prevPull.next;
     document.getElementById('pages').innerText = prevPull.title;
     next = prevPull.next;
+    prev = prevPull.prev;
   })
 }
