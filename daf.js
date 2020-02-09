@@ -3,7 +3,7 @@ var date;
 var next;
 var prev;
 var dafLength;
-
+var enPasuk;
 fetch('https://www.sefaria.org/api/calendars/')
   .then(function(response) {
     return response.json()
@@ -17,18 +17,20 @@ fetch('https://www.sefaria.org/api/calendars/')
     return response.json()
   })
  .then(function(textPull){
-   for (var pasuk of textPull.text ) {
+   enPasuk = textPull.text;
+   hePasuk = textPull.he;
+   count = 0;
+   for (var pasuk of enPasuk) {
+     var i = pasuk;
     var ul = document.getElementById("enText"); 
     var li = document.createElement("li");
-    li.innerHTML = pasuk + "<br>"+"<br>";
+    li.innerHTML = hePasuk[count] + "<br>"+"<br>" + "<span>" + pasuk + "</span> <br> <br>";
     ul.appendChild(li);
+    count++;
   }
-  //document.getElementById("enText").innerHTML = textPull.text;
-  document.getElementById("heText").innerHTML = textPull.he;
   document.getElementById("next").innerHTML = textPull.next;
   next = textPull.next;
   prev = textPull.prev;
-  //document.getElementById('enText').innerHTML = prev;
  })
   })
 
