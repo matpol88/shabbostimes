@@ -29,6 +29,7 @@ fetch('https://www.sefaria.org/api/calendars/')
     count++;
   }
   document.getElementById("next").innerHTML = textPull.next;
+  document.getElementById("prev").innerHTML = textPull.prev;
   next = textPull.next;
   prev = textPull.prev;
  })
