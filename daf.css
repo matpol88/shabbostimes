@@ -4,9 +4,12 @@ body{
   font-size:18px;
 }
 
-#enText, #heText, #nextText, #nextHeText{
+#prevText{
+  display:none;
+}
+#enText, #prevText{
   margin: 0 15%;
-  padding-top: 65px;
+  padding: 65px 20px 0;
   font-size: 24px;
 
 }
@@ -14,9 +17,7 @@ body{
 #heText{
   text-align: right;
 }
-.content p{
-  margin-top:15%;
-}
+
 .button{
   display: flex;
   flex-direction: row;
@@ -28,11 +29,10 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  position:fixed;
   padding-top:120px;
 }
 
-.header a, .header p, #prevpages {
+.header a, .header p{
   color: white;
   padding-top:15px;
 }
@@ -44,19 +44,12 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
-}
-
-#nextnextText, #nextnextHeText{
-  display: none;
+  
 }
 
 @media screen and (orientation:portrait){
-  #enText, #heText, #nextText, #nextHeText{
+  #enText, #prevText{
     margin:0 1.5%;
     font-size: 18px;
-  }
-  #prevpages{
-    display: none;
   }
   }
